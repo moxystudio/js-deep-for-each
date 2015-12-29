@@ -1,0 +1,10 @@
+{
+    "root": true,
+    "env": {
+        "mocha": true
+    },
+    "extends": [
+        "./node_modules/@satazor/eslint-config/es5.js",
+        "./node_modules/@satazor/eslint-config/addons/node.js"
+    ]
+}

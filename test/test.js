@@ -7,9 +7,7 @@ var forEach = require('../');
 var analyzed;
 
 function analyze(value, prop, subject, path) {
-    var key;
-
-    /*jshint validthis:true*/
+    /* eslint no-invalid-this:0 */
     if (!Array.isArray(subject) && !isPlainObject(subject)) {
         throw new Error('Expect subject to be an array or an object');
     }
@@ -21,7 +19,7 @@ function analyze(value, prop, subject, path) {
     analyzed.push({
         value: value,
         prop: prop,
-        path: path
+        path: path,
     });
 }
 
@@ -38,19 +36,19 @@ describe('deep-for-each', function () {
 
     it('should not call fn on primitive input', function () {
         forEach(undefined, analyze);
-        assertAnalyzed([])
+        assertAnalyzed([]);
 
         forEach(null, analyze);
-        assertAnalyzed([])
+        assertAnalyzed([]);
 
         forEach('  ', analyze);
-        assertAnalyzed([])
+        assertAnalyzed([]);
 
         forEach('', analyze);
-        assertAnalyzed([])
+        assertAnalyzed([]);
 
         forEach(true, analyze);
-        assertAnalyzed([])
+        assertAnalyzed([]);
     });
 
     it('should iterate object entries recursively', function () {
@@ -58,55 +56,55 @@ describe('deep-for-each', function () {
         assertAnalyzed([{
             value: null,
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }]);
 
         forEach({ foo: undefined }, analyze);
         assertAnalyzed([{
             value: undefined,
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }]);
 
         forEach({ foo: { bar: null } }, analyze);
         assertAnalyzed([{
             value: { bar: null },
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }, {
             value: null,
             prop: 'bar',
-            path: 'foo.bar'
+            path: 'foo.bar',
         }]);
 
         forEach({ foo: { bar: undefined } }, analyze);
         assertAnalyzed([{
             value: { bar: undefined },
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }, {
             value: undefined,
             prop: 'bar',
-            path: 'foo.bar'
+            path: 'foo.bar',
         }]);
 
         forEach({ foo: { bar: null, baz: 1, bay: '  ' } }, analyze);
         assertAnalyzed([{
             value: { bar: null, baz: 1, bay: '  ' },
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }, {
             value: null,
             prop: 'bar',
-            path: 'foo.bar'
+            path: 'foo.bar',
         }, {
             value: 1,
             prop: 'baz',
-            path: 'foo.baz'
+            path: 'foo.baz',
         }, {
             value: '  ',
             prop: 'bay',
-            path: 'foo.bay'
+            path: 'foo.bay',
         }]);
     });
 
@@ -115,41 +113,41 @@ describe('deep-for-each', function () {
         assertAnalyzed([{
             value: null,
             prop: 0,
-            path: '[0]'
+            path: '[0]',
         }]);
 
         forEach([undefined], analyze);
         assertAnalyzed([{
             value: undefined,
             prop: 0,
-            path: '[0]'
+            path: '[0]',
         }]);
 
         forEach([1, ['foo', '', null, '  ']], analyze);
         assertAnalyzed([{
             value: 1,
             prop: 0,
-            path: '[0]'
+            path: '[0]',
         }, {
             value: ['foo', '', null, '  '],
             prop: 1,
-            path: '[1]'
+            path: '[1]',
         }, {
             value: 'foo',
             prop: 0,
-            path: '[1][0]'
+            path: '[1][0]',
         }, {
             value: '',
             prop: 1,
-            path: '[1][1]'
+            path: '[1][1]',
         }, {
             value: null,
             prop: 2,
-            path: '[1][2]'
+            path: '[1][2]',
         }, {
             value: '  ',
             prop: 3,
-            path: '[1][3]'
+            path: '[1][3]',
         }]);
     });
 
@@ -158,76 +156,76 @@ describe('deep-for-each', function () {
             something: [
                 {
                     colors: ['red', ' green ', ''],
-                    cars: { audi: 'nice', vw: 'good', aston: '' }
+                    cars: { audi: 'nice', vw: 'good', aston: '' },
                 },
                 undefined,
-                ''
+                '',
             ],
-            foo: 'bar'
+            foo: 'bar',
         }, analyze);
 
         assertAnalyzed([{
             value: [
                 {
                     colors: ['red', ' green ', ''],
-                    cars: { audi: 'nice', vw: 'good', aston: '' }
+                    cars: { audi: 'nice', vw: 'good', aston: '' },
                 },
                 undefined,
-                ''
+                '',
             ],
             prop: 'something',
             path: 'something',
         }, {
             value: {
                 colors: ['red', ' green ', ''],
-                cars: { audi: 'nice', vw: 'good', aston: '' }
+                cars: { audi: 'nice', vw: 'good', aston: '' },
             },
             prop: 0,
-            path: 'something[0]'
+            path: 'something[0]',
         }, {
             value: ['red', ' green ', ''],
             prop: 'colors',
-            path: 'something[0].colors'
+            path: 'something[0].colors',
         }, {
             value: 'red',
             prop: 0,
-            path: 'something[0].colors[0]'
+            path: 'something[0].colors[0]',
         }, {
             value: ' green ',
             prop: 1,
-            path: 'something[0].colors[1]'
+            path: 'something[0].colors[1]',
         }, {
             value: '',
             prop: 2,
-            path: 'something[0].colors[2]'
+            path: 'something[0].colors[2]',
         }, {
             value: { audi: 'nice', vw: 'good', aston: '' },
             prop: 'cars',
-            path: 'something[0].cars'
+            path: 'something[0].cars',
         }, {
             value: 'nice',
             prop: 'audi',
-            path: 'something[0].cars.audi'
+            path: 'something[0].cars.audi',
         }, {
             value: 'good',
             prop: 'vw',
-            path: 'something[0].cars.vw'
+            path: 'something[0].cars.vw',
         }, {
             value: '',
             prop: 'aston',
-            path: 'something[0].cars.aston'
+            path: 'something[0].cars.aston',
         }, {
             value: undefined,
             prop: 1,
-            path: 'something[1]'
+            path: 'something[1]',
         }, {
             value: '',
             prop: 2,
-            path: 'something[2]'
+            path: 'something[2]',
         }, {
             value: 'bar',
             prop: 'foo',
-            path: 'foo'
+            path: 'foo',
         }]);
     });
 });

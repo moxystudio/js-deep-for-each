@@ -3,11 +3,9 @@
 
 var isPlainObject = require('is-plain-object');
 
-function deepForEach(value, fn) {
-    forEach(value, fn, '');
-}
-
 function forEach(value, fn, path) {
+    path = path || '';
+
     if (Array.isArray(value)) {
         forEachArray(value, fn, path);
     } else if (isPlainObject(value)) {
@@ -29,17 +27,16 @@ function forEachObject(obj, fn, path) {
 }
 
 function forEachArray(array, fn, path) {
-    var filtered = [];
     var deepPath = '';
 
-    array.forEach(function (value, index, array) {
+    array.forEach(function (value, index, arr) {
         deepPath = path + '[' + index + ']';
-        fn.call(array, value, index, array, deepPath);
+        fn.call(arr, value, index, arr, deepPath);
         forEach(value, fn, deepPath);
     });
 }
 
-module.exports = deepForEach;
+module.exports = forEach;
 
 },{"is-plain-object":2}],2:[function(require,module,exports){
 /*!
