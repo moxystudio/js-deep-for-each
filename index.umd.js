@@ -15,14 +15,13 @@ function forEach(value, fn, path) {
 
 function forEachObject(obj, fn, path) {
     var key;
-    var value;
     var deepPath;
 
     for (key in obj) {
-        value = obj[key];
         deepPath = path ? path + '.' + key : key;
-        fn.call(obj, value, key, obj, deepPath);
-        forEach(value, fn, deepPath);
+        // Note that we always use obj[key] because it might be mutated by forEach
+        fn.call(obj, obj[key], key, obj, deepPath);
+        forEach(obj[key], fn, deepPath);
     }
 }
 
@@ -32,7 +31,8 @@ function forEachArray(array, fn, path) {
     array.forEach(function (value, index, arr) {
         deepPath = path + '[' + index + ']';
         fn.call(arr, value, index, arr, deepPath);
-        forEach(value, fn, deepPath);
+        // Note that we use arr[index] because it might be mutated by forEach
+        forEach(arr[index], fn, deepPath);
     });
 }
 

@@ -2,6 +2,7 @@
 
 var expect = require('expect.js');
 var isPlainObject = require('is-plain-object');
+var cloneDeep = require('lodash.clonedeep');
 var forEach = require('../');
 
 var analyzed;
@@ -224,6 +225,43 @@ describe('deep-for-each', function () {
             path: 'something[2]',
         }, {
             value: 'bar',
+            prop: 'foo',
+            path: 'foo',
+        }]);
+    });
+
+    it('should use the up to date value (in case the forEach callback modified it)', function () {
+        forEach({
+            arr: [[1, { foo: 'bar' }]],
+            foo: { bar: 'baz' },
+        }, function (value, prop, subject, path) {
+            if (path === 'arr[0]') {
+                subject[prop] = [1, {}];
+            } else if (path === 'foo') {
+                subject[prop] = 'bar';
+            }
+
+            analyze.call(this, cloneDeep(value), prop, subject, path);
+        });
+
+        assertAnalyzed([{
+            value: [[1, { foo: 'bar' }]],
+            prop: 'arr',
+            path: 'arr',
+        }, {
+            value: [1, { foo: 'bar' }],
+            prop: 0,
+            path: 'arr[0]',
+        }, {
+            value: 1,
+            prop: 0,
+            path: 'arr[0][0]',
+        }, {
+            value: {},
+            prop: 1,
+            path: 'arr[0][1]',
+        }, {
+            value: { bar: 'baz' },
             prop: 'foo',
             path: 'foo',
         }]);
