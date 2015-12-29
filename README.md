@@ -1,6 +1,6 @@
 # deep-for-each [![Build Status](https://travis-ci.org/IndigoUnited/js-deep-for-each.svg?branch=master)](https://travis-ci.org/IndigoUnited/js-deep-for-each)
 
-Recursively iterates over collections (arrays and objects).
+Recursively iterates over collections (arrays and objects). The iteration is made using a [deep-first](https://en.wikipedia.org/wiki/Depth-first_search) algorithm.
 
 
 ## Installation
