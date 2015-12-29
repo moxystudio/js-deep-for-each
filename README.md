@@ -17,7 +17,6 @@ If you want to run this module on old browsers, you must include [es5-shim](http
 The example bellow is based on `nodejs`.
 
 ```js
-// Example 1 - Remove all strings equal to 'foo'
 var deepForEach = require('deep-filter');
 
 deepForEach({
@@ -33,7 +32,7 @@ deepForEach({
     // subject is either an array or an object
     // path is the iteration path, e.g.: 'prop2[0]' and 'prop4.prop5'
 });
-``
+```
 
 
 ## Tests
