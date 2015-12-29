@@ -31,7 +31,24 @@ deepForEach({
     // prop is an array index or an object key
     // subject is either an array or an object
     // path is the iteration path, e.g.: 'prop2[0]' and 'prop4.prop5'
+
+    console.log(path + ':', value);
 });
+```
+
+Running the example above will print:
+
+```
+prop1: foo
+prop2: [ 'foo', 'bar' ]
+prop2[0]: foo
+prop2[1]: bar
+prop3: [ 'foo', 'foo' ]
+prop3[0]: foo
+prop3[1]: foo
+prop4: { prop5: 'foo', prop6: 'bar' }
+prop4.prop5: foo
+prop4.prop6: bar
 ```
 
 
