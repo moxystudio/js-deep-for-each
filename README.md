@@ -29,7 +29,7 @@ If you want to run this module on old browsers, you must include [es5-shim](http
 The example bellow is based on `nodejs`.
 
 ```js
-var deepForEach = require('deep-filter');
+var deepForEach = require('deep-for-each');
 
 deepForEach({
     prop1: 'foo',
