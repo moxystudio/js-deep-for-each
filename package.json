@@ -4,7 +4,7 @@
   "description": "Recursively iterates collection values (arrays and objects)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec --bail",
+    "test": "mocha --bail",
     "browserify": "browserify -s deep-for-each index.js > index.umd.js"
   },
   "bugs": {
