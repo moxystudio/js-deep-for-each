@@ -1,6 +1,6 @@
 {
   "name": "deep-for-each",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Recursively iterates collection values (arrays and objects)",
   "main": "index.umd.js",
   "homepage": "https://github.com/IndigoUnited/js-deep-for-each",
