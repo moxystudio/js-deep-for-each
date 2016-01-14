@@ -4,7 +4,7 @@
   "description": "Recursively iterates collection values (arrays and objects)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec --bail",
+    "test": "mocha --bail",
     "browserify": "browserify -s deep-for-each index.js > index.umd.js"
   },
   "bugs": {
@@ -26,9 +26,9 @@
   "license": "MIT",
   "devDependencies": {
     "@satazor/eslint-config": "^1.0.0",
-    "browserify": "^12.0.1",
+    "browserify": "^13.0.0",
     "expect.js": "^0.3.1",
-    "lodash.clonedeep": "^3.0.2",
+    "lodash.clonedeep": "^4.0.1",
     "mocha": "^2.1.0"
   },
   "dependencies": {
