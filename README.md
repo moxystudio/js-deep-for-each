@@ -6,7 +6,7 @@
 [downloads-image]:http://img.shields.io/npm/dm/deep-for-each.svg
 [npm-image]:http://img.shields.io/npm/v/deep-for-each.svg
 [travis-url]:https://travis-ci.org/IndigoUnited/js-deep-for-each
-[travis-image]:http://img.shields.io/travis/IndigoUnited/js-deep-for-each.svg
+[travis-image]:http://img.shields.io/travis/IndigoUnited/js-deep-for-each/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/js-deep-for-each
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/js-deep-for-each.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/js-deep-for-each#info=devDependencies
