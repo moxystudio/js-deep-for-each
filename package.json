@@ -4,7 +4,7 @@
   "description": "Recursively iterates collection values (arrays and objects)",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.js --ignore-pattern *.umd.js",
+    "lint": "eslint '{*.js,lib/**/*.js,test/**/*.js}' --ignore-pattern *.umd.js",
     "test": "mocha --bail",
     "browserify": "browserify -s deep-for-each index.js > index.umd.js"
   },
