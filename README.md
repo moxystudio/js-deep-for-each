@@ -11,7 +11,7 @@
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/js-deep-for-each.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/js-deep-for-each?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/js-deep-for-each.svg
-[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/node-p-throttler.svg
+[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/js-deep-for-each.svg
 [greenkeeper-url]:https://greenkeeper.io/
 
 Recursively iterates over collections (arrays and objects). The iteration is made using a [deep-first](https://en.wikipedia.org/wiki/Depth-first_search) algorithm.
