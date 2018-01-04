@@ -27,7 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "@satazor/eslint-config": "^3.0.0",
-    "browserify": "^14.3.0",
+    "browserify": "^15.0.0",
     "eslint": "^3.0.0",
     "expect.js": "^0.3.1",
     "lodash.clonedeep": "^4.0.1",
