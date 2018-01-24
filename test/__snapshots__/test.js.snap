@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should iterate array/objects recursively 1`] = `
+Array [
+  Array [
+    Array [
+      Object {
+        "cars": Object {
+          "aston": "",
+          "audi": "nice",
+          "vw": "good",
+        },
+        "colors": Array [
+          "red",
+          " green ",
+          "",
+        ],
+      },
+      undefined,
+      "",
+    ],
+    "something",
+    Object {
+      "foo": "bar",
+      "something": Array [
+        Object {
+          "cars": Object {
+            "aston": "",
+            "audi": "nice",
+            "vw": "good",
+          },
+          "colors": Array [
+            "red",
+            " green ",
+            "",
+          ],
+        },
+        undefined,
+        "",
+      ],
+    },
+    "something",
+  ],
+  Array [
+    Object {
+      "cars": Object {
+        "aston": "",
+        "audi": "nice",
+        "vw": "good",
+      },
+      "colors": Array [
+        "red",
+        " green ",
+        "",
+      ],
+    },
+    0,
+    Array [
+      Object {
+        "cars": Object {
+          "aston": "",
+          "audi": "nice",
+          "vw": "good",
+        },
+        "colors": Array [
+          "red",
+          " green ",
+          "",
+        ],
+      },
+      undefined,
+      "",
+    ],
+    "something[0]",
+  ],
+  Array [
+    Array [
+      "red",
+      " green ",
+      "",
+    ],
+    "colors",
+    Object {
+      "cars": Object {
+        "aston": "",
+        "audi": "nice",
+        "vw": "good",
+      },
+      "colors": Array [
+        "red",
+        " green ",
+        "",
+      ],
+    },
+    "something[0].colors",
+  ],
+  Array [
+    "red",
+    0,
+    Array [
+      "red",
+      " green ",
+      "",
+    ],
+    "something[0].colors[0]",
+  ],
+  Array [
+    " green ",
+    1,
+    Array [
+      "red",
+      " green ",
+      "",
+    ],
+    "something[0].colors[1]",
+  ],
+  Array [
+    "",
+    2,
+    Array [
+      "red",
+      " green ",
+      "",
+    ],
+    "something[0].colors[2]",
+  ],
+  Array [
+    Object {
+      "aston": "",
+      "audi": "nice",
+      "vw": "good",
+    },
+    "cars",
+    Object {
+      "cars": Object {
+        "aston": "",
+        "audi": "nice",
+        "vw": "good",
+      },
+      "colors": Array [
+        "red",
+        " green ",
+        "",
+      ],
+    },
+    "something[0].cars",
+  ],
+  Array [
+    "nice",
+    "audi",
+    Object {
+      "aston": "",
+      "audi": "nice",
+      "vw": "good",
+    },
+    "something[0].cars.audi",
+  ],
+  Array [
+    "good",
+    "vw",
+    Object {
+      "aston": "",
+      "audi": "nice",
+      "vw": "good",
+    },
+    "something[0].cars.vw",
+  ],
+  Array [
+    "",
+    "aston",
+    Object {
+      "aston": "",
+      "audi": "nice",
+      "vw": "good",
+    },
+    "something[0].cars.aston",
+  ],
+  Array [
+    undefined,
+    1,
+    Array [
+      Object {
+        "cars": Object {
+          "aston": "",
+          "audi": "nice",
+          "vw": "good",
+        },
+        "colors": Array [
+          "red",
+          " green ",
+          "",
+        ],
+      },
+      undefined,
+      "",
+    ],
+    "something[1]",
+  ],
+  Array [
+    "",
+    2,
+    Array [
+      Object {
+        "cars": Object {
+          "aston": "",
+          "audi": "nice",
+          "vw": "good",
+        },
+        "colors": Array [
+          "red",
+          " green ",
+          "",
+        ],
+      },
+      undefined,
+      "",
+    ],
+    "something[2]",
+  ],
+  Array [
+    "bar",
+    "foo",
+    Object {
+      "foo": "bar",
+      "something": Array [
+        Object {
+          "cars": Object {
+            "aston": "",
+            "audi": "nice",
+            "vw": "good",
+          },
+          "colors": Array [
+            "red",
+            " green ",
+            "",
+          ],
+        },
+        undefined,
+        "",
+      ],
+    },
+    "foo",
+  ],
+]
+`;
+
+exports[`should iterate arrays recursively 1`] = `
+Array [
+  Array [
+    null,
+    0,
+    Array [
+      null,
+    ],
+    "[0]",
+  ],
+]
+`;
+
+exports[`should iterate arrays recursively 2`] = `
+Array [
+  Array [
+    undefined,
+    0,
+    Array [
+      undefined,
+    ],
+    "[0]",
+  ],
+]
+`;
+
+exports[`should iterate arrays recursively 3`] = `
+Array [
+  Array [
+    1,
+    0,
+    Array [
+      1,
+      Array [
+        "foo",
+        "",
+        null,
+        "  ",
+      ],
+    ],
+    "[0]",
+  ],
+  Array [
+    Array [
+      "foo",
+      "",
+      null,
+      "  ",
+    ],
+    1,
+    Array [
+      1,
+      Array [
+        "foo",
+        "",
+        null,
+        "  ",
+      ],
+    ],
+    "[1]",
+  ],
+  Array [
+    "foo",
+    0,
+    Array [
+      "foo",
+      "",
+      null,
+      "  ",
+    ],
+    "[1][0]",
+  ],
+  Array [
+    "",
+    1,
+    Array [
+      "foo",
+      "",
+      null,
+      "  ",
+    ],
+    "[1][1]",
+  ],
+  Array [
+    null,
+    2,
+    Array [
+      "foo",
+      "",
+      null,
+      "  ",
+    ],
+    "[1][2]",
+  ],
+  Array [
+    "  ",
+    3,
+    Array [
+      "foo",
+      "",
+      null,
+      "  ",
+    ],
+    "[1][3]",
+  ],
+]
+`;
+
+exports[`should iterate object entries recursively 1`] = `
+Array [
+  Array [
+    null,
+    "foo",
+    Object {
+      "foo": null,
+    },
+    "foo",
+  ],
+]
+`;
+
+exports[`should iterate object entries recursively 2`] = `
+Array [
+  Array [
+    undefined,
+    "foo",
+    Object {
+      "foo": undefined,
+    },
+    "foo",
+  ],
+]
+`;
+
+exports[`should iterate object entries recursively 3`] = `
+Array [
+  Array [
+    Object {
+      "bar": null,
+    },
+    "foo",
+    Object {
+      "foo": Object {
+        "bar": null,
+      },
+    },
+    "foo",
+  ],
+  Array [
+    null,
+    "bar",
+    Object {
+      "bar": null,
+    },
+    "foo.bar",
+  ],
+]
+`;
+
+exports[`should iterate object entries recursively 4`] = `
+Array [
+  Array [
+    Object {
+      "bar": undefined,
+    },
+    "foo",
+    Object {
+      "foo": Object {
+        "bar": undefined,
+      },
+    },
+    "foo",
+  ],
+  Array [
+    undefined,
+    "bar",
+    Object {
+      "bar": undefined,
+    },
+    "foo.bar",
+  ],
+]
+`;
+
+exports[`should iterate object entries recursively 5`] = `
+Array [
+  Array [
+    Object {
+      "bar": null,
+      "baz": 1,
+      "bez": "  ",
+    },
+    "foo",
+    Object {
+      "foo": Object {
+        "bar": null,
+        "baz": 1,
+        "bez": "  ",
+      },
+    },
+    "foo",
+  ],
+  Array [
+    null,
+    "bar",
+    Object {
+      "bar": null,
+      "baz": 1,
+      "bez": "  ",
+    },
+    "foo.bar",
+  ],
+  Array [
+    1,
+    "baz",
+    Object {
+      "bar": null,
+      "baz": 1,
+      "bez": "  ",
+    },
+    "foo.baz",
+  ],
+  Array [
+    "  ",
+    "bez",
+    Object {
+      "bar": null,
+      "baz": 1,
+      "bez": "  ",
+    },
+    "foo.bez",
+  ],
+]
+`;
+
+exports[`should use the up to date value (in case the forEach callback modified it) 1`] = `
+Array [
+  Array [
+    Array [
+      Array [
+        1,
+        Object {},
+      ],
+    ],
+    "arr",
+    Object {
+      "arr": Array [
+        Array [
+          1,
+          Object {},
+        ],
+      ],
+      "foo": "bar",
+    },
+    "arr",
+  ],
+  Array [
+    Array [
+      1,
+      Object {
+        "foo": "bar",
+      },
+    ],
+    0,
+    Array [
+      Array [
+        1,
+        Object {},
+      ],
+    ],
+    "arr[0]",
+  ],
+  Array [
+    1,
+    0,
+    Array [
+      1,
+      Object {},
+    ],
+    "arr[0][0]",
+  ],
+  Array [
+    Object {},
+    1,
+    Array [
+      1,
+      Object {},
+    ],
+    "arr[0][1]",
+  ],
+  Array [
+    Object {
+      "bar": "baz",
+    },
+    "foo",
+    Object {
+      "arr": Array [
+        Array [
+          1,
+          Object {},
+        ],
+      ],
+      "foo": "bar",
+    },
+    "foo",
+  ],
+]
+`;

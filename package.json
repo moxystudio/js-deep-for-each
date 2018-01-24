@@ -1,20 +1,7 @@
 {
   "name": "deep-for-each",
   "version": "1.0.6",
-  "description": "Recursively iterates collection values (arrays and objects)",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint '{*.js,test/**/*.js}' --ignore-pattern *.umd.js",
-    "test": "mocha --bail",
-    "browserify": "browserify -s deep-for-each index.js > index.umd.js"
-  },
-  "bugs": {
-    "url": "https://github.com/IndigoUnited/js-deep-for-each/issues/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/IndigoUnited/js-deep-for-each.git"
-  },
+  "description": "Recursively iterates over arrays and objects",
   "keywords": [
     "foreach",
     "for-each",
@@ -23,17 +10,56 @@
     "object",
     "collection"
   ],
-  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
-  "license": "MIT",
-  "devDependencies": {
-    "@satazor/eslint-config": "^3.0.0",
-    "browserify": "^14.3.0",
-    "eslint": "^3.0.0",
-    "expect.js": "^0.3.1",
-    "lodash.clonedeep": "^4.0.1",
-    "mocha": "^3.0.2"
+  "author": "André Cruz <andre@moxy.studio>",
+  "homepage": "https://github.com/moxystudio/js-deep-for-each",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moxystudio/js-deep-for-each.git"
   },
-  "dependencies": {
-    "is-plain-object": "^2.0.1"
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
+    "build:es": "BABEL_ENV=es babel src -d es",
+    "build": "npm run build:commonjs && npm run build:es",
+    "lint": "eslint .",
+    "test": "jest --env node --coverage",
+    "prerelease": "npm t && npm run lint",
+    "release": "standard-version",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "standard-version": {
+    "scripts": {
+      "posttag": "git push --follow-tags origin master && npm publish"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^6.0.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-moxy": "^2.0.4",
+    "eslint": "^4.3.0",
+    "eslint-config-moxy": "^4.1.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.0",
+    "lint-staged": "^6.0.0",
+    "standard-version": "^4.2.0"
   }
 }
