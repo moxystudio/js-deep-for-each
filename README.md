@@ -7,8 +7,8 @@
 [npm-image]:http://img.shields.io/npm/v/deep-for-each.svg
 [travis-url]:https://travis-ci.org/moxystudio/js-deep-for-each
 [travis-image]:http://img.shields.io/travis/moxystudio/js-deep-for-each/master.svg
-[codecov-url]:https://codecov.io/gh/moxystudio/node-is-regular-file
-[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/node-is-regular-file/master.svg
+[codecov-url]:https://codecov.io/gh/moxystudio/js-deep-for-each
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/js-deep-for-each/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/js-deep-for-each
 [david-dm-image]:https://img.shields.io/david/moxystudio/js-deep-for-each.svg
 [david-dm-dev-url]:https://david-dm.org/moxystudio/js-deep-for-each?type=dev
