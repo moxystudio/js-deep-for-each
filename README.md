@@ -39,9 +39,9 @@ deepForEach({
         prop5: 'foo',
         prop6: 'bar',
     },
-}, (value, prop, subject, path) => {
+}, (value, key, subject, path) => {
     // `value` is the current property value
-    // `prop` is the current property name
+    // `key` is the current property name
     // `subject` is either an array or an object
     // `path` is the iteration path, e.g.: 'prop2[0]' and 'prop4.prop5'
 
