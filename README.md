@@ -29,7 +29,7 @@ This library expects the host environment to be up-to-date or polyfilled with [c
 ## Usage
 
 ```js
-const deepForEach = require('deep-for-each');
+import deepForEach from 'deep-for-each';
 
 deepForEach({
     prop1: 'foo',
