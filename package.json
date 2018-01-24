@@ -29,7 +29,7 @@
     "build": "npm run build:commonjs && npm run build:es",
     "lint": "eslint .",
     "test": "jest --env node --coverage",
-    "prerelease": "npm t && npm run lint",
+    "prerelease": "npm t && npm run lint && npm run build",
     "release": "standard-version",
     "precommit": "lint-staged",
     "commitmsg": "commitlint -e $GIT_PARAMS"
