@@ -27,6 +27,8 @@ This library expects the host environment to be up-to-date or polyfilled with [c
 
 Is is also using ES modules. In order to support older browsers, you should compile the source code.
 
+This library is written in ES9 and is using ES modules. You must compile the source code to support older browsers.
+
 ## Usage
 
 ```js
