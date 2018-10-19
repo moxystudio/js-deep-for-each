@@ -25,6 +25,9 @@ Recursively iterates over arrays and objects. The iteration is made using a [dee
 
 This library expects the host environment to be up-to-date or polyfilled with [core-js](https://github.com/zloirock/core-js) or similar.
 
+Is is also using ES modules. In order to support older browsers, you should compile the source code.
+
+This library is written in ES9 and is using ES modules. You must compile the source code to support older browsers.
 
 ## Usage
 
