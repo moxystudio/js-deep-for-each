@@ -20,15 +20,10 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
-  "module": "es/index.js",
   "files": [
-    "lib",
-    "es"
+    "lib"
   ],
   "scripts": {
-    "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
-    "build:es": "BABEL_ENV=es babel src -d es",
-    "build": "npm run build:commonjs && npm run build:es",
     "lint": "eslint .",
     "test": "jest --env node --coverage",
     "prerelease": "npm t && npm run lint && npm run build",
