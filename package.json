@@ -46,7 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^6.0.0",
+    "@commitlint/cli": "^7.1.0",
     "@commitlint/config-conventional": "^6.0.2",
     "babel-preset-moxy": "^2.1.0",
     "eslint": "^4.3.0",
@@ -61,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   }
