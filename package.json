@@ -54,7 +54,7 @@
     "husky": "^1.1.2",
     "jest": "^22.0.0",
     "lint-staged": "^7.0.0",
-    "standard-version": "^4.2.0"
+    "standard-version": "^5.0.0"
   },
   "dependencies": {
     "lodash.isplainobject": "^4.0.6"
