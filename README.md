@@ -1,6 +1,6 @@
 # deep-for-each
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] 
 
 [npm-url]:https://npmjs.org/package/deep-for-each
 [downloads-image]:http://img.shields.io/npm/dm/deep-for-each.svg
@@ -13,8 +13,6 @@
 [david-dm-image]:https://img.shields.io/david/moxystudio/js-deep-for-each.svg
 [david-dm-dev-url]:https://david-dm.org/moxystudio/js-deep-for-each?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/js-deep-for-each.svg
-[greenkeeper-image]:https://badges.greenkeeper.io/moxystudio/js-deep-for-each.svg
-[greenkeeper-url]:https://greenkeeper.io/
 
 Recursively iterates over arrays and objects. The iteration is made using a [deep-first](https://en.wikipedia.org/wiki/Depth-first_search) algorithm.
 
