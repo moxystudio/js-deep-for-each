@@ -6,20 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 # [3.0.0](https://github.com/moxystudio/js-deep-for-each/compare/v2.0.3...v3.0.0) (2019-03-13)
 
 
-### Chores
-
-* remove babel compilation ([#32](https://github.com/moxystudio/js-deep-for-each/issues/32)) ([0faa4b7](https://github.com/moxystudio/js-deep-for-each/commit/0faa4b7))
-
-
 ### Features
 
 * offer cjs build ([b266efd](https://github.com/moxystudio/js-deep-for-each/commit/b266efd))
-
-
-### BREAKING CHANGES
-
-* This library is no longer built with Babel, you must compile it yourself within your app
-
 
 
 <a name="2.0.3"></a>
