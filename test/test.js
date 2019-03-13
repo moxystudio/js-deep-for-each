@@ -1,4 +1,4 @@
-import forEach from '../lib';
+import forEach from '../src';
 
 const iterator = jest.fn(() => {});
 

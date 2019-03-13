@@ -20,11 +20,16 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
+  "module": "es/index.js",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
   "scripts": {
-    "lint": "eslint .",
+    "build:commonjs": "BABEL_ENV=commonjs babel src -d lib",
+    "build:es": "BABEL_ENV=es babel src -d es",
+    "build": "npm run build:commonjs && npm run build:es",
+    "lint": "eslint --ignore-path .gitignore .",
     "test": "jest --env node --coverage",
     "prerelease": "npm t && npm run lint && npm run build",
     "release": "standard-version"
@@ -46,15 +51,18 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.1.0",
-    "@commitlint/config-conventional": "^6.0.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "babel-jest": "^24.5.0",
     "babel-preset-moxy": "^3.0.4",
-    "eslint": "^4.3.0",
-    "eslint-config-moxy": "^5.0.0",
-    "husky": "^1.1.2",
+    "eslint": "^5.15.1",
+    "eslint-config-moxy": "^7.0.1",
+    "husky": "^1.3.1",
     "jest": "^24.5.0",
-    "lint-staged": "^7.0.0",
-    "standard-version": "^4.2.0"
+    "lint-staged": "^8.1.5",
+    "standard-version": "^5.0.1"
   },
   "dependencies": {
     "lodash.isplainobject": "^4.0.6"

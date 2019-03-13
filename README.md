@@ -19,13 +19,12 @@ Recursively iterates over arrays and objects. The iteration is made using a [dee
 
 ## Installation
 
-`$ npm install deep-for-each`
+```sh
+$ npm install deep-for-each
+```
 
-This library expects the host environment to be up-to-date or polyfilled with [core-js](https://github.com/zloirock/core-js) or similar.
+This library is written in modern JavaScript and is published in both CommonJS and ES module transpiled variants. If you target older browsers please make sure to transpile accordingly.
 
-Is is also using ES modules. In order to support older browsers, you should compile the source code.
-
-This library is written in ES9 and is using ES modules. You must compile the source code to support older browsers.
 
 ## Usage
 
@@ -68,8 +67,10 @@ prop4.prop6: bar
 
 ## Tests
 
-`$ npm test`   
-`$ npm test -- --watch` during development
+```sh
+$ npm test
+$ npm test -- --watch # during development
+```
 
 
 ## License
