@@ -1,6 +1,6 @@
 {
   "name": "deep-for-each",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Recursively iterates over arrays and objects",
   "keywords": [
     "foreach",
