@@ -3,10 +3,10 @@
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 [npm-url]:https://npmjs.org/package/deep-for-each
-[downloads-image]:http://img.shields.io/npm/dm/deep-for-each.svg
-[npm-image]:http://img.shields.io/npm/v/deep-for-each.svg
+[downloads-image]:https://img.shields.io/npm/dm/deep-for-each.svg
+[npm-image]:https://img.shields.io/npm/v/deep-for-each.svg
 [travis-url]:https://travis-ci.org/moxystudio/js-deep-for-each
-[travis-image]:http://img.shields.io/travis/moxystudio/js-deep-for-each/master.svg
+[travis-image]:https://img.shields.io/travis/moxystudio/js-deep-for-each/master.svg
 [codecov-url]:https://codecov.io/gh/moxystudio/js-deep-for-each
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/js-deep-for-each/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/js-deep-for-each
@@ -75,4 +75,4 @@ $ npm test -- --watch # during development
 
 ## License
 
-Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+Released under the [MIT License](https://www.opensource.org/licenses/mit-license.php).
