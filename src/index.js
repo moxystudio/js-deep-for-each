@@ -1,4 +1,4 @@
-import isPlainObject from 'lodash.isplainobject';
+import isPlainObject from 'lodash/isplainobject';
 
 function forEachObject(obj, fn, path) {
     for (const key in obj) {
